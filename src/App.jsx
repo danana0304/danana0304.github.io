@@ -9,7 +9,7 @@ const projects = [
     title: "AI Training Avatar",
     previewFrames: [
       "/images/drive_dashboard.png",
-      "/images/ai-training-avatar-2.svg",
+      "/images/app_drive_module.png",
     ],
     description:
       "A landing page redesign with a sharper visual system, custom motion, and a cleaner conversion flow.",
@@ -26,7 +26,10 @@ const projects = [
   {
     slug: "chronus",
     title: "ChronUs",
-    previewFrames: ["/images/CreateMeeting_Month.png", "/images/chronus-2.svg"],
+    previewFrames: [
+      "/images/CreateMeeting_Month.png",
+      "/images/CreateMeeting.png",
+    ],
     description:
       "An analytics dashboard with reusable charts, responsive cards, and a preview slot for screen recordings or GIFs.",
     fullDescription:
