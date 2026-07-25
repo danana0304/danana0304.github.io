@@ -16,7 +16,7 @@ const projects = [
     fullDescription:
       "Built independently during my internship at DriveCX, this application uses ChatGPT to simulate conversations with employees after training sessions. Responses are analyzed automatically and summarized for management, replacing manual evaluations with an engaging, scalable assessment workflow.",
     previewAlt: "AI Training Avatar application",
-    tags: ["TypeScript", "React", "Node.js", "OpenAI API"],
+    tags: ["TypeScript", "Angular", "PostgreSQL", "OpenAI API"],
     highlights: [
       "Built and deployed the application independently.",
       "Automated employee training evaluations using LLMs.",
@@ -36,7 +36,7 @@ const projects = [
     fullDescription:
       "ChronUs helps groups find the best meeting time through an interactive availability interface. Users can create polls, invite participants, receive deadline reminders, and compare schedules across time zones.",
     previewAlt: "ChronUs scheduling platform",
-    tags: ["React", "Express", "MongoDB", "Tailwind CSS"],
+    tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
     highlights: [
       "Interactive availability grid inspired by When2Meet.",
       "Automated email reminders using Nodemailer.",
@@ -47,7 +47,7 @@ const projects = [
   {
     slug: "muze",
     title: "Muze",
-    previewFrames: ["/images/Muze_login.svg", "/images/Muze_proto.svg"],
+    previewFrames: ["/images/Muze_login.png", "/images/Muze_proto.png"],
     description:
       "A music discovery platform powered by community-driven tags and moods.",
     fullDescription:
@@ -64,7 +64,7 @@ const projects = [
   {
     slug: "stamp",
     title: "Stamp",
-    previewFrames: ["/images/stamp_main.png", "/images/stamp-2.svg"],
+    previewFrames: ["/images/stamp_main.png", "/images/stamp_globe.png"],
     description:
       "A social platform that gamifies exploring and sharing places.",
     fullDescription:
@@ -94,7 +94,7 @@ function getProjectSlugFromHash() {
 }
 
 function ProjectDetail({ project }) {
-  const previewSrc = project.previewFrames?.[0] || project.previewSrc;
+  // const previewSrc = project.previewFrames?.[0] || project.previewSrc;
 
   return (
     <section className="project-detail" aria-labelledby="project-title">
@@ -104,15 +104,18 @@ function ProjectDetail({ project }) {
 
       <div className="project-detail-grid">
         <div className="project-detail-media">
-          {previewSrc ? (
-            <img
-              className="project-detail-image"
-              src={previewSrc}
-              alt={project.previewAlt || project.title}
-            />
+          {project.previewFrames?.length > 0 ? (
+            project.previewFrames.map((frame) => (
+              <img
+                key={frame}
+                src={frame}
+                className="project-detail-image"
+                alt={project.title}
+              />
+            ))
           ) : (
             <div className="project-detail-placeholder">
-              <span>Sorry! I haven't added visuals yet..</span>
+              <span>Add preview image or animated GIF</span>
             </div>
           )}
         </div>

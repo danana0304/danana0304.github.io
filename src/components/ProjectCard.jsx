@@ -1,3 +1,5 @@
+// import { useEffect, useState } from "react";
+
 function ProjectCard({
   href,
   title,
@@ -8,26 +10,18 @@ function ProjectCard({
   tags = [],
 }) {
   const CardTag = href ? "a" : "article";
-  const frames = previewFrames?.length
-    ? previewFrames
-    : previewSrc
-      ? [previewSrc]
-      : [];
+
+  const previewImage = previewFrames?.[0] || previewSrc;
 
   return (
     <CardTag className="project-card" href={href}>
       <div className="project-preview">
-        {frames.length > 0 ? (
-          frames.map((frame, index) => (
-            <img
-              key={frame}
-              className="project-media project-media-frame"
-              src={frame}
-              alt={index === 0 ? previewAlt || title : ""}
-              aria-hidden={index > 0}
-              style={{ "--frame-index": index }}
-            />
-          ))
+        {previewImage ? (
+          <img
+            className="project-media"
+            src={previewImage}
+            alt={previewAlt || title}
+          />
         ) : (
           <div className="project-placeholder">
             <span>Add preview image or GIF</span>
@@ -45,6 +39,7 @@ function ProjectCard({
         </div>
 
         <h2 className="project-title">{title}</h2>
+
         <p className="project-description">{description}</p>
       </div>
     </CardTag>

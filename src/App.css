@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .app-shell {
   min-height: 100svh;
   display: flex;
@@ -92,8 +97,8 @@
   cursor: pointer;
 }
 
-.project-card-link:hover .project-preview {
-  transform: scale(110%);
+.project-card:hover .project-preview {
+  transform: scale(1.03);
 }
 
 .project-card-link:focus-visible .project-preview {
@@ -106,12 +111,18 @@
 }
 
 .project-preview {
-  position: relative;
-  aspect-ratio: 16 / 10;
-  background: linear-gradient(135deg, #e2c7c4, rgba(244, 243, 236, 0.75));
-  border-bottom: 1px solid var(--border);
-  transition: transform 180ms ease;
+  width: 100%;
+  height: 240px; /* fixed preview height */
   overflow: hidden;
+  background: var(--code-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-media,
@@ -125,40 +136,20 @@
   object-fit: cover;
 }
 
-.project-media-frame {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 240ms ease;
+.project-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  animation: imageFade 300ms ease;
 }
 
-.project-media-frame:first-child {
-  opacity: 1;
-}
-
-.project-card:hover .project-media-frame,
-.project-card:focus-within .project-media-frame,
-.project-card-link:focus-visible .project-media-frame {
-  animation: projectPreviewSlideshow 6s linear infinite;
-  animation-delay: calc(var(--frame-index) * 2s);
-}
-
-.project-card:hover .project-media-frame:first-child,
-.project-card:focus-within .project-media-frame:first-child,
-.project-card-link:focus-visible .project-media-frame:first-child {
-  opacity: 1;
-}
-
-@keyframes projectPreviewSlideshow {
-  0%,
-  28% {
-    opacity: 1;
-  }
-
-  38%,
-  100% {
+@keyframes imageFade {
+  from {
     opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -198,7 +189,8 @@
 .project-title {
   margin: 0;
   font-size: 22px;
-  line-height: 1.1;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .project-description {
@@ -211,6 +203,13 @@
   display: grid;
   gap: 18px;
   text-align: left;
+}
+
+.project-detail-body h1 {
+  margin: 0;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
 }
 
 .project-backlink {
@@ -235,20 +234,22 @@
 }
 
 .project-detail-media {
-  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   border: 1px solid var(--border);
   border-radius: 24px;
-  overflow: hidden;
+  padding: 20px;
   background: color-mix(in srgb, var(--bg) 92%, var(--accent) 8%);
   box-shadow: var(--shadow);
 }
 
-.project-detail-image,
-.project-detail-placeholder {
+.project-detail-image {
   width: 100%;
-  height: 100%;
-  min-height: 320px;
+  height: auto;
   display: block;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 .project-detail-image {
