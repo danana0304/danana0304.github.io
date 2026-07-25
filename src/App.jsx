@@ -12,66 +12,69 @@ const projects = [
       "/images/app_drive_module.png",
     ],
     description:
-      "A landing page redesign with a sharper visual system, custom motion, and a cleaner conversion flow.",
+      "An AI-powered training platform that evaluates employee understanding through natural conversations with a virtual avatar.",
     fullDescription:
-      "A concept page for a product that introduces an AI training avatar with a polished conversion path, dynamic composition, and room for preview media.",
-    previewAlt: "Preview for AI Training Avatar",
-    tags: ["UI", "Branding", "Motion"],
+      "Built independently during my internship at DriveCX, this application uses ChatGPT to simulate conversations with employees after training sessions. Responses are analyzed automatically and summarized for management, replacing manual evaluations with an engaging, scalable assessment workflow.",
+    previewAlt: "AI Training Avatar application",
+    tags: ["TypeScript", "React", "Node.js", "OpenAI API"],
     highlights: [
-      "Responsive landing layout with a stronger visual hierarchy.",
-      "Dedicated preview space for screenshots or GIF walkthroughs.",
-      "Flexible content sections for benefits, features, and CTA copy.",
+      "Built and deployed the application independently.",
+      "Automated employee training evaluations using LLMs.",
+      "Generated reports for management through an AI workflow.",
     ],
   },
+
   {
     slug: "chronus",
     title: "ChronUs",
     previewFrames: [
       "/images/CreateMeeting_Month.png",
-      "/images/CreateMeeting.png",
+      "/images/Chronus_mobile.png",
     ],
     description:
-      "An analytics dashboard with reusable charts, responsive cards, and a preview slot for screen recordings or GIFs.",
+      "A collaborative scheduling platform for organizing meetings with large groups.",
     fullDescription:
-      "A dashboard-style portfolio entry focused on reusable widgets, compact information density, and a dedicated media panel for product motion.",
-    previewAlt: "Preview for ChronUs dashboard",
-    tags: ["React", "Dashboard", "Data"],
+      "ChronUs helps groups find the best meeting time through an interactive availability interface. Users can create polls, invite participants, receive deadline reminders, and compare schedules across time zones.",
+    previewAlt: "ChronUs scheduling platform",
+    tags: ["React", "Express", "MongoDB", "Tailwind CSS"],
     highlights: [
-      "Card-based dashboard components that scale across breakpoints.",
-      "Structured preview area for an animated product demo.",
-      "Clear metric blocks for showing the impact of the project.",
+      "Interactive availability grid inspired by When2Meet.",
+      "Automated email reminders using Nodemailer.",
+      "Responsive interface with timezone-aware scheduling.",
     ],
   },
+
   {
     slug: "muze",
     title: "Muze",
-    previewFrames: ["/images/muze-1.svg", "/images/muze-2.svg"],
+    previewFrames: ["/images/Muze_login.svg", "/images/Muze_proto.svg"],
     description:
-      "A compact mobile-first concept where animated previews can be swapped in for the final portfolio presentation.",
+      "A music discovery platform powered by community-driven tags and moods.",
     fullDescription:
-      "A mobile-first product concept with a focus on concise storytelling, strong spacing, and a media region for animated previews or GIFs.",
-    previewAlt: "Preview for Muze mobile concept",
-    tags: ["Mobile", "Prototype", "Animation"],
+      "Muze helps users discover music through descriptive tags rather than genres. The application integrates Spotify metadata, supports community-generated tags, and delivers personalized recommendations based on mood and listening preferences.",
+    previewAlt: "Muze music discovery app",
+    tags: ["React", "Supabase", "Spotify API", "Python"],
     highlights: [
-      "Designed to read well on narrow screens and small devices.",
-      "Preview region supports GIFs, screenshots, or short clips.",
-      "Simple copy structure for describing the app concept.",
+      "Integrated Spotify metadata into a searchable music database.",
+      "Designed a scalable tag-based recommendation system.",
+      "Built responsive interfaces for exploring and organizing music.",
     ],
   },
+
   {
     slug: "stamp",
     title: "Stamp",
     previewFrames: ["/images/stamp_main.png", "/images/stamp-2.svg"],
     description:
-      "A compact mobile-first concept where animated previews can be swapped in for the final portfolio presentation.",
+      "A social platform that gamifies exploring and sharing places.",
     fullDescription:
-      "A visual identity and product concept that can be presented with a live screenshot, looping GIF, or static preview frame.",
-    previewAlt: "Preview for Stamp concept",
-    tags: ["Mobile", "Prototype", "Animation"],
+      "Stamp encourages users to collect digital stamps from locations they visit, transforming everyday experiences into achievements. The product focuses on simple interactions, visual storytelling, and social engagement.",
+    previewAlt: "Stamp application",
+    tags: ["Figma", "React", "UI/UX", "Prototyping"],
     highlights: [
-      "Built as a clean showcase page for quick project scanning.",
-      "Supports media-rich presentation with a single card click.",
-      "Works as a template for future case-study style entries.",
+      "Designed a mobile-first user experience.",
+      "Created interactive high-fidelity prototypes.",
+      "Focused on intuitive navigation and visual storytelling.",
     ],
   },
 ];
