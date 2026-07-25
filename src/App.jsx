@@ -68,7 +68,7 @@ const projects = [
     description:
       "A social platform that gamifies exploring and sharing places.",
     fullDescription:
-      "Stamp encourages users to collect digital stamps from locations they visit, transforming everyday experiences into achievements. The product focuses on simple interactions, visual storytelling, and social engagement.",
+      "Stamp transforms places into personal stories by allowing users to create digital stamps for the experiences they discover. Each stamp can include photos, songs, local weather, and personal notes, creating a richer memory of the moment. Users can share their experiences with friends, discover new places through others' stories, and build a visual collection of the places that matter to them.",
     previewAlt: "Stamp application",
     tags: ["Figma", "React", "UI/UX", "Prototyping"],
     highlights: [
@@ -112,7 +112,7 @@ function ProjectDetail({ project }) {
             />
           ) : (
             <div className="project-detail-placeholder">
-              <span>Add preview image or animated GIF</span>
+              <span>Sorry! I haven't added visuals yet..</span>
             </div>
           )}
         </div>
@@ -176,11 +176,11 @@ function App() {
             aria-labelledby="projects-heading"
           >
             <div className="projects-intro">
-              <p className="eyebrow">Selected work</p>
-              <h1 id="projects-heading">Portfolio projects</h1>
+              <p className="eyebrow">Selected Work</p>
+              <h1 id="projects-heading">Projects I've loved building.</h1>
               <p className="section-copy">
-                Each card includes a dedicated preview area for an image,
-                screenshot, or animated GIF.
+                Every project has a story. Click a card to explore the problem,
+                my approach, and what I built.
               </p>
             </div>
 
